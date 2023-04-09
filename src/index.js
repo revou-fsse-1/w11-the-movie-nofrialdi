@@ -7,9 +7,16 @@ const checkUserExist = () => {
   fetch(API_ENDPOINT)
     .then((response) => response.json())
     .then((data) => {
-      const registeredUsername = data.find((e) => e.username === usernameInput.value);
-      const registeredPassword = data.find((e) => e.password === passwordInput.value);
-      if (registeredUsername === undefined || registeredPassword === undefined) {
+      const registeredUsername = data.find(
+        (e) => e.username === usernameInput.value
+      );
+      const registeredPassword = data.find(
+        (e) => e.password === passwordInput.value
+      );
+      if (
+        registeredUsername === undefined ||
+        registeredPassword === undefined
+      ) {
         usernameInput.style.backgroundColor = "pink";
         passwordInput.style.backgroundColor = "pink";
         alert("Invalid Email / Password");

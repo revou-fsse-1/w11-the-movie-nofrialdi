@@ -31,14 +31,14 @@
       "id": 5
     },
     {
-      "username": "nofrialdi",
-      "email": "aldi@gmail.com",
-      "password": "Aldi123",
+      "username": "nofri",
+      "email": "nofri@gmail.com",
+      "password": "Nofri31193",
       "id": 6
     },
     {
-      "username": "nofri",
-      "email": "nofrialdi@gmail.com",
+      "username": "aldi",
+      "email": "aldi@gmail.com",
       "password": "Aldi31193",
       "id": 7
     }
@@ -515,6 +515,28 @@
       "trailer": "https://www.youtube.com/embed/EXeTwQWrcwY",
       "rating": 9,
       "isWatched": false
+    },
+    {
+      "id": "1",
+      "title": "Avatar",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/16625437697033_405x594.jpg",
+      "synopsis": "Avatar akan kembali ke layar lebar.Seorang Marinir lumpuh dikirim ke bulan Pandora untuk menjalani misi khusus namun, ia justru dilema antara mengikuti perintah atau melindungi dunia baru yang pelan-pelan ia panggil rumah",
+      "genre": "Action,Adventure,Fantasy",
+      "production": "20th Century Studios",
+      "trailer": "https://www.youtube.com/embed/NZrX_ES93JA",
+      "rating": "8.5",
+      "year": "undefined"
+    },
+    {
+      "id": "5",
+      "title": "The Godfather",
+      "image": "https://th.bing.com/th/id/OIP._5fxLczZe-Orf76zbPUWSAHaLH?w=120&h=180&c=7&r=0&o=5&pid=1.7",
+      "synopsis": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+      "genre": "Crime,Drama",
+      "production": "undefined",
+      "trailer": "",
+      "rating": "9.2",
+      "year": "undefined"
     }
   ]
 }

@@ -9,7 +9,8 @@ const registerButton = document.getElementById("register-button");
 // Username regex
 const alphabetRegex = /[a-zA-Z]/;
 // Email regex
-const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+const emailRegex =
+  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 // Password Regex
 const uppercaseRegex = /[A-Z]/;
 const lowercaseRegex = /[a-z]/;
@@ -44,7 +45,13 @@ const checkEmail = () => {
 
 // Check password
 const checkPassword = () => {
-  if (!uppercaseRegex.test(passwordInput.value) || !lowercaseRegex.test(passwordInput.value) || !numberRegex.test(passwordInput.value) || symbolRegex.test(passwordInput.value) || !passwordInput) {
+  if (
+    !uppercaseRegex.test(passwordInput.value) ||
+    !lowercaseRegex.test(passwordInput.value) ||
+    !numberRegex.test(passwordInput.value) ||
+    symbolRegex.test(passwordInput.value) ||
+    !passwordInput
+  ) {
     passwordInput.style.backgroundColor = "pink";
     registerButton.disabled = true;
     return false;
@@ -89,7 +96,9 @@ const checkUserExist = () => {
   fetch(API_ENDPOINT)
     .then((response) => response.json())
     .then((data) => {
-      const registeredUsername = data.find((e) => e.username === usernameInput.value);
+      const registeredUsername = data.find(
+        (e) => e.username === usernameInput.value
+      );
       const registeredEmail = data.find((e) => e.email === emailInput.value);
 
       if (registeredUsername !== undefined || registeredEmail !== undefined) {
@@ -104,7 +113,12 @@ const checkUserExist = () => {
 
 const validateForm = (e) => {
   e.preventDefault();
-  if (!checkUsername() || !checkEmail() || !checkPassword() || !checkPasswordConfirm()) {
+  if (
+    !checkUsername() ||
+    !checkEmail() ||
+    !checkPassword() ||
+    !checkPasswordConfirm()
+  ) {
     alert("Please complete the registration process");
   } else {
     checkUserExist();
